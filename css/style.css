@@ -189,7 +189,15 @@ section.menu {
 }
 /*Fin Media Querie Table*/
 
-/*Sección About*/
+/*Inicio Media Querie Desktop*/
+@media (min-width: 1140px) {
+  .title__bio {
+    font-size: 52px;
+  }
+}
+/*Fin Media Querie Desktop*/
+
+/*Sección About Sobre Mi*/
 
 section.about {
   width: 100%;
@@ -212,6 +220,7 @@ section.about {
   text-align: justify;
 }
 
+/*Inicio Media Querie Desktop*/
 @media (min-width: 1140px) {
   .about__title {
     font-size: 32px;
@@ -222,45 +231,52 @@ section.about {
     font-size: 16px;
   }
 }
+/*Fin Media Querie Desktop*/
 
 /*Sección Skills*/
 section.skills {
 }
 
 .skills__title,
-.hobbies__title {
+.hobbies__title,
+.academic__title,
+.experience__section__title {
   text-align: center;
+  font-size: 22px;
 }
 
-.skills__line {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+.skills__line,
+.hobbies__line {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(125px, 1fr));
   gap: 16px;
-  justify-content: center;
 }
 
-.skills__box {
+.skills__box,
+.hobbies__box {
   height: 110px;
-  width: 125px;
   background-color: var(--blanco);
   display: flex;
-  /* align-items: center; */
-  /* flex-grow: 1; */
 }
 
-.skills__box ul {
+.skills__box ul,
+.hobbies__box ul {
   margin: auto;
   padding: 0;
   text-align: center;
 }
 
-.skills__icon {
-  width: 100%;
+.skills__name,
+.hobbies__name {
+  margin-top: 5px;
+  font-size: 16px;
 }
 
-.skills__box ul li:last-child {
-  margin-top: 5px;
+@media (min-width: 1140px) {
+  .skills__title,
+  .hobbies__title {
+    font-size: 32px;
+  }
 }
 
 /*Sección Hobbies*/
@@ -280,9 +296,46 @@ section.academic {
   text-align: center;
 }
 
+.academic__courses {
+  width: 90%;
+  margin: 0 auto;
+  padding: 1px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px; */
+}
+
+.academic__courses__list {
+  padding: 0 10px;
+}
+
+.academic__courses__item__img {
+  width: 100%;
+  background-color: var(--blanco);
+  text-align: center;
+}
+
+@media (min-width: 291px) {
+  .academic__courses__item__img {
+    width: 290px;
+  }
+}
+
 /* experiencia*/
 
 section.experience {
+}
+
+.experience__proyect {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.experience__img {
+  width: 100%;
 }
 
 /*Contacto*/
@@ -290,9 +343,31 @@ section.experience {
 section.formcontato {
 }
 
+.formcontato__img {
+  width: 100%;
+}
+
+.formcontato__text {
+  width: 90%;
+}
+
+.formcontato__form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+
 /*footeer*/
 
 section.footer {
+  width: 100%;
+  padding: 16px 0;
+  text-align: center;
+  background-color: var(--blanco);
+}
+
+.footer__text {
+  font-size: 16px;
 }
 
 /* Vamos a desafiarnos trabajando con responsividad?
