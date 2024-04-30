@@ -11,6 +11,7 @@ coloque nas sessões indicadas*/
   --cor-de-link: #000;
   --celeste-claro: #eaf2fd;
   --blanco: #ffffff;
+  --azul: #2a7ae4;
 }
 
 body {
@@ -47,6 +48,23 @@ https://en.bem.info/methodology/quick-start/*/
 section {
   width: 90%;
   margin: 0 auto;
+  padding: 32px 0;
+}
+
+.text-mobile {
+  font-size: 16px;
+  text-align: justify;
+}
+
+.button {
+  background-color: var(--azul);
+  color: var(--blanco);
+  padding: 15px;
+  border: none;
+}
+
+.button:hover {
+  cursor: pointer;
 }
 
 /*Sección Menu*/
@@ -56,6 +74,7 @@ section.menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0;
 }
 
 .menu__header {
@@ -114,8 +133,9 @@ section.menu {
 
 /*Sección Title*/
 
-/* section.title {
-} */
+section.title {
+  padding: 0;
+}
 
 .title__div {
   width: 100%;
@@ -129,9 +149,14 @@ section.menu {
   border-radius: 50%;
 }
 
+.title__container {
+  padding: 32px 0;
+}
+
 .title__bio {
   font-size: 22px;
   font-weight: bold;
+  margin: 0;
 }
 
 .title__subsection {
@@ -143,6 +168,7 @@ section.menu {
 .title__network {
   display: flex;
   padding-left: 0;
+  margin-bottom: 0;
   justify-content: flex-start;
   column-gap: 10px;
   flex-wrap: wrap;
@@ -207,7 +233,6 @@ section.about {
 .about__container {
   width: 90%;
   margin: 0 auto;
-  padding: 16px 0;
 }
 
 .about__title {
@@ -243,10 +268,12 @@ section.skills {
 .experience__section__title {
   text-align: center;
   font-size: 22px;
+  margin: 0;
 }
 
 .skills__line,
 .hobbies__line {
+  padding-top: 32px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(125px, 1fr));
   gap: 16px;
@@ -282,6 +309,7 @@ section.skills {
 /*Sección Hobbies*/
 
 section.hobbies {
+  padding-top: 16px;
 }
 
 /* Experiencia Académica*/
@@ -289,40 +317,69 @@ section.hobbies {
 section.academic {
   width: 100%;
   background-color: var(--celeste-claro);
+  padding: 32px 0;
 }
 
 .academic__title {
-  padding-top: 32px;
   text-align: center;
 }
 
 .academic__courses {
   width: 90%;
   margin: 0 auto;
-  padding: 1px 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 16px; */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.academic__courses__box {
 }
 
 .academic__courses__list {
-  padding: 0 10px;
+  padding: 0;
 }
 
 .academic__courses__item__img {
-  width: 100%;
+  padding: 16px 0;
   background-color: var(--blanco);
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-@media (min-width: 291px) {
+.academic__courses__img {
+  width: 75%;
+}
+
+.academic__courses__item__title {
+  font-size: 16px;
+}
+
+.academic__courses__item__subtitle {
+  font-size: 14px;
+}
+
+/*Media Querie Phone*/
+@media (min-width: 463px) {
   .academic__courses__item__img {
-    width: 290px;
+    height: 200px;
+  }
+
+  .academic__courses__img {
+    width: 60%;
   }
 }
+
+/*Inicio de Media Querie Desktop*/
+@media (min-width: 1140px) {
+  .academic__courses {
+    column-gap: 32px;
+  }
+  .academic__courses__item__img {
+    height: 300px;
+  }
+}
+/*Fin de Media Querie Desktop*/
 
 /* experiencia*/
 
@@ -341,6 +398,18 @@ section.experience {
 /*Contacto*/
 
 section.formcontato {
+  width: 100%;
+  background-color: var(--celeste-claro);
+  padding-top: 16px;
+}
+
+.formcontato__contacto {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.formcontato--esquerda {
+  display: none;
 }
 
 .formcontato__img {
@@ -348,7 +417,11 @@ section.formcontato {
 }
 
 .formcontato__text {
-  width: 90%;
+  width: 100%;
+}
+
+.formcontato__subtext {
+  font-weight: normal;
 }
 
 .formcontato__form {
@@ -357,7 +430,34 @@ section.formcontato {
   row-gap: 16px;
 }
 
-/*footeer*/
+.formcontato__input,
+.formcontato__textarea {
+  border-radius: 5px;
+  border: none;
+  padding: 15px;
+  font-size: 16px;
+}
+
+.formcontato__botao {
+  text-align: left;
+  width: 130px;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.formcontato__botao:hover {
+  cursor: pointer;
+}
+
+/*Inicio de Media Querie Desktop*/
+@media (min-width: 1140px) {
+  .formcontato--esquerda {
+    display: block;
+  }
+}
+/*Fin de Media Querie Desktop*/
+
+/*Inicio Footeer*/
 
 section.footer {
   width: 100%;
@@ -366,9 +466,7 @@ section.footer {
   background-color: var(--blanco);
 }
 
-.footer__text {
-  font-size: 16px;
-}
+/*Fin Footeer*/
 
 /* Vamos a desafiarnos trabajando con responsividad?
 Utiliza las referencias de los breakpoints @media abajo */
