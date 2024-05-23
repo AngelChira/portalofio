@@ -17,8 +17,8 @@
   </head>
 
   <body>
-    <!-- Sección del Menú  -->
     <div class="tudo">
+      <!-- Sección del Menú  -->
       <section class="menu">
         <header class="menu__header">
           <img src="assets\vector.png" />
@@ -80,7 +80,7 @@
                 /></a>
               </li>
               <li class="title__network__item">
-                <a href="#" target="_blank"
+                <a download="" href="docs/CV_Angel_Chira.pdf" target="_blank"
                   >Currículo
                   <img src="assets\arrow.png" alt="icono de una flecha"
                 /></a>
@@ -95,20 +95,19 @@
         <div class="about__container">
           <h3 class="about__title">Sobre mi</h3>
           <p class="about__paragraph">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Pellentesque velit velit, volutpat semper dignissim dictum,
-            imperdiet ut lacus. Quisque gravida ex a mattis pretium. Suspendisse
-            potenti. Ut semper sagittis ligula et lacinia.
+            Estudiante de Ingeniería de Sistemas e Informática de la 
+            Universidad Tecnológica del Perú, con conocimientos en HTML, 
+            CSS, JavaScript, Java, MySQL, Oracle DB, Excel y Word a nivel 
+            intermedio. Me gusta ser autodidacta en aprender tecnologías 
+            nuevas requeridas en el mercado laboral de tal manera que 
+            pueda mejorar mis habilidades personales y profesionales.
           </p>
           <p class="about__paragraph">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Pellentesque velit velit, volutpat semper dignissim dictum,
-            imperdiet ut lacus. Quisque gravida ex a mattis pretium. Suspendisse
-            potenti. Ut semper sagittis ligula et lacinia. Aenean sit amet felis
-            venenatis, egestas metus vitae, aliquet metus.
+            Me considero una persona puntual, puedo desempeñarme en cualquier
+            rubo laboral, ya sea ayudando y aprendiendo para mejorar cada día.
           </p>
           <!-- Si quieres, pon tú firma acá! -->
-          <img src="assets\signature.png" />
+          <!-- <img src="assets\signature.png" /> -->
         </div>
       </section>
 
@@ -143,14 +142,14 @@
             </ul>
           </div>
 
-          <div class="skills__box">
+          <!-- <div class="skills__box">
             <ul>
               <li class="skills__img">
                 <img src="img/php.png" alt="" />
               </li>
               <li class="skills__name">PHP</li>
             </ul>
-          </div>
+          </div> -->
 
           <div class="skills__box">
             <ul>
@@ -161,14 +160,14 @@
             </ul>
           </div>
 
-          <div class="skills__box">
+          <!-- <div class="skills__box">
             <ul>
               <li class="skills__img">
                 <img src="img\react.png" alt="logo-de-react" />
               </li>
               <li class="skills__name">React</li>
             </ul>
-          </div>
+          </div> -->
 
           <div class="skills__box">
             <ul>
@@ -185,6 +184,15 @@
                 <img src="img/oracle.png" alt="logo-de-mysql" />
               </li>
               <li class="skills__name">OracleDB</li>
+            </ul>
+          </div>
+
+          <div class="skills__box">
+            <ul>
+              <li class="skills__img">
+                <img src="img/git.png" alt="logo-de-mysql" />
+              </li>
+              <li class="skills__name">Git</li>
             </ul>
           </div>
         </div>
@@ -262,7 +270,7 @@
                 <h4>Ingeniería de Sistemas e Informática</h4>
               </li>
               <li class="academic__courses__item__subtitle">
-                <p>2020 - UTP</p>
+                <p>2020 - En Curso</p>
               </li>
             </ul>
           </div>
@@ -277,15 +285,15 @@
                 <h4>Formación en Front-End</h4>
               </li>
               <li class="academic__courses__item__subtitle">
-                <p>2024 - Alura</p>
+                <p>2024 - En Curso</p>
               </li>
             </ul>
           </div>
 
-          <div class="academic__courses__box">
-            <ul class="academic__courses__list">
+          <!-- <div class="academic__courses__box">
+            <ul class="academic__courses__list"> -->
               <!-- Pon el logotipo de la institución de formación -->
-              <li class="academic__courses__item__img">
+              <!-- <li class="academic__courses__item__img">
                 <img
                   class="academic__courses__img"
                   src="assets\ufrj_logo.png"
@@ -299,14 +307,14 @@
               </li>
             </ul>
           </div>
-        </div>
+        </div> -->
       </section>
 
       <!-- Sección de Experiencia Profesional/Proyectos-->
       <section class="experience" id="xp">
         <h2 class="experience__section__title">Experiencia Profesional</h2>
         <div class="experience__proyect">
-          <div class="experiencie__box">
+          <div class="experience__1">
             <!-- Pon el logotipo/captura de pantalla de tu proyecto -->
             <img class="experience__img" src="assets\decod_print.png" />
             <div class="experience__info">
@@ -334,7 +342,7 @@
             </div>
           </div>
 
-          <div class="experiencie__box">
+          <div class="experience__1">
             <!-- Pon el logotipo/captura de pantalla de tu proyecto -->
             <img class="experience__img" src="assets\forca_print.png" />
             <div class="experience__info">
@@ -364,7 +372,7 @@
             </div>
           </div>
 
-          <div class="experience__box">
+          <div class="experience__2">
             <!-- Pon el logotipo/captura de pantalla de tu proyecto -->
             <img class="experience__img" src="assets\secretcode_print.png" />
             <div class="experience__info-container">
@@ -392,7 +400,7 @@
             </div>
           </div>
 
-          <div class="experience__box">
+          <div class="experience__2">
             <img class="experience__img" src="assets\forca2_print.png" />
             <div class="experience__info-container">
               <h2 class="experience__title">
@@ -438,36 +446,75 @@
               Complete el siguiente formulario y me pondré en contacto con usted
               lo antes posible.
             </h3>
-            <form class="formcontato__form" name="form">
+            <form class="formcontato__form" autocomplete="off">
               <input
                 class="formcontato__input"
                 type="text"
+                id="nombre"
                 name="nombre"
+                title="El nombre debe contener solo letras y espacios."
                 placeholder="Nombre"
-              />
-              <input
+                pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"
+                required
+                />
+                <span class="formcontato__error none">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 16 16">
+                    <path fill="currentColor" fill-rule="evenodd" d="M8.6 1c1.6.1 3.1.9 4.2 2c1.3 1.4 2 3.1 2 5.1c0 1.6-.6 3.1-1.6 4.4c-1 1.2-2.4 2.1-4 2.4c-1.6.3-3.2.1-4.6-.7c-1.4-.8-2.5-2-3.1-3.5C.9 9.2.8 7.5 1.3 6c.5-1.6 1.4-2.9 2.8-3.8C5.4 1.3 7 .9 8.6 1zm.5 12.9c1.3-.3 2.5-1 3.4-2.1c.8-1.1 1.3-2.4 1.2-3.8c0-1.6-.6-3.2-1.7-4.3c-1-1-2.2-1.6-3.6-1.7c-1.3-.1-2.7.2-3.8 1c-1.1.8-1.9 1.9-2.3 3.3c-.4 1.3-.4 2.7.2 4c.6 1.3 1.5 2.3 2.7 3c1.2.7 2.6.9 3.9.6zM7.9 7.5L10.3 5l.7.7l-2.4 2.5l2.4 2.5l-.7.7l-2.4-2.5l-2.4 2.5l-.7-.7l2.4-2.5l-2.4-2.5l.7-.7l2.4 2.5z" clip-rule="evenodd"/>
+                  </svg>
+                  Campo requerido.
+                </span>
+                <input
                 class="formcontato__input"
                 type="email"
+                id="email"
                 name="email"
+                title="El email es inválido."
                 placeholder="E-mail"
-              />
-              <input
+                pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9\-]+(\.[a-z0-9\-]+)*(\.[a-z]{2,15})$"
+                required
+                />
+                <span class="formcontato__error none">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 16 16">
+                    <path fill="currentColor" fill-rule="evenodd" d="M8.6 1c1.6.1 3.1.9 4.2 2c1.3 1.4 2 3.1 2 5.1c0 1.6-.6 3.1-1.6 4.4c-1 1.2-2.4 2.1-4 2.4c-1.6.3-3.2.1-4.6-.7c-1.4-.8-2.5-2-3.1-3.5C.9 9.2.8 7.5 1.3 6c.5-1.6 1.4-2.9 2.8-3.8C5.4 1.3 7 .9 8.6 1zm.5 12.9c1.3-.3 2.5-1 3.4-2.1c.8-1.1 1.3-2.4 1.2-3.8c0-1.6-.6-3.2-1.7-4.3c-1-1-2.2-1.6-3.6-1.7c-1.3-.1-2.7.2-3.8 1c-1.1.8-1.9 1.9-2.3 3.3c-.4 1.3-.4 2.7.2 4c.6 1.3 1.5 2.3 2.7 3c1.2.7 2.6.9 3.9.6zM7.9 7.5L10.3 5l.7.7l-2.4 2.5l2.4 2.5l-.7.7l-2.4-2.5l-2.4 2.5l-.7-.7l2.4-2.5l-2.4-2.5l.7-.7l2.4 2.5z" clip-rule="evenodd"/>
+                  </svg>
+                  Campo requerido.
+                </span>
+                <input
                 class="formcontato__input"
                 type="text"
+                id="asunto"
                 name="asunto"
+                title="El asunto es requerido."
                 placeholder="Assunto"
-              />
-              <textarea
+                required
+                />
+                <span class="formcontato__error none">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 16 16">
+                    <path fill="currentColor" fill-rule="evenodd" d="M8.6 1c1.6.1 3.1.9 4.2 2c1.3 1.4 2 3.1 2 5.1c0 1.6-.6 3.1-1.6 4.4c-1 1.2-2.4 2.1-4 2.4c-1.6.3-3.2.1-4.6-.7c-1.4-.8-2.5-2-3.1-3.5C.9 9.2.8 7.5 1.3 6c.5-1.6 1.4-2.9 2.8-3.8C5.4 1.3 7 .9 8.6 1zm.5 12.9c1.3-.3 2.5-1 3.4-2.1c.8-1.1 1.3-2.4 1.2-3.8c0-1.6-.6-3.2-1.7-4.3c-1-1-2.2-1.6-3.6-1.7c-1.3-.1-2.7.2-3.8 1c-1.1.8-1.9 1.9-2.3 3.3c-.4 1.3-.4 2.7.2 4c.6 1.3 1.5 2.3 2.7 3c1.2.7 2.6.9 3.9.6zM7.9 7.5L10.3 5l.7.7l-2.4 2.5l2.4 2.5l-.7.7l-2.4-2.5l-2.4 2.5l-.7-.7l2.4-2.5l-2.4-2.5l.7-.7l2.4 2.5z" clip-rule="evenodd"/>
+                  </svg>
+                  Campo requerido.
+                </span>
+                <textarea
                 class="formcontato__textarea"
                 rows="5"
                 cols="40"
-                id="mensagem"
+                id="mensaje"
                 name="mensaje"
                 placeholder="Mensaje"
+                required
               ></textarea>
+              <span class="formcontato__error none">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 16 16">
+                    <path fill="currentColor" fill-rule="evenodd" d="M8.6 1c1.6.1 3.1.9 4.2 2c1.3 1.4 2 3.1 2 5.1c0 1.6-.6 3.1-1.6 4.4c-1 1.2-2.4 2.1-4 2.4c-1.6.3-3.2.1-4.6-.7c-1.4-.8-2.5-2-3.1-3.5C.9 9.2.8 7.5 1.3 6c.5-1.6 1.4-2.9 2.8-3.8C5.4 1.3 7 .9 8.6 1zm.5 12.9c1.3-.3 2.5-1 3.4-2.1c.8-1.1 1.3-2.4 1.2-3.8c0-1.6-.6-3.2-1.7-4.3c-1-1-2.2-1.6-3.6-1.7c-1.3-.1-2.7.2-3.8 1c-1.1.8-1.9 1.9-2.3 3.3c-.4 1.3-.4 2.7.2 4c.6 1.3 1.5 2.3 2.7 3c1.2.7 2.6.9 3.9.6zM7.9 7.5L10.3 5l.7.7l-2.4 2.5l2.4 2.5l-.7.7l-2.4-2.5l-2.4 2.5l-.7-.7l2.4-2.5l-2.4-2.5l.7-.7l2.4 2.5z" clip-rule="evenodd"/>
+                  </svg>
+                  Campo requerido.
+                </span>
               <button type="submit" class="formcontato__botao button">
                 Enviar mensaje
               </button>
+              <p class="formcontato__alert none">
+                ¡El formulario se envió correctamente!
+              </p>
             </form>
           </div>
         </div>

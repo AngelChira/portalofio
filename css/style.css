@@ -7,17 +7,20 @@ coloque nas sessões indicadas*/
 :root {
   /* Inserta la variable de los otros colores inspeccionando el exemplo de figma */
   /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
+  --fuente-principal: "Raleway", sans-serif;
   --cor-de-fundo: #f5f5f5;
   --cor-de-link: #000;
   --celeste-claro: #eaf2fd;
   --blanco: #ffffff;
   --azul: #2a7ae4;
+  --red: #ff0000;
+  --verde: #008000;
 }
 
 body {
   box-sizing: border-box;
   background-color: var(--cor-de-fundo);
-  font-family: "Raleway";
+  font-family: var(--fuente-principal);
   margin: 0;
   padding: 0;
   line-height: 1;
@@ -56,14 +59,17 @@ section {
   text-align: justify;
 }
 
-.button {
+.button,
+.experience__botao--demo {
   background-color: var(--azul);
   color: var(--blanco);
   padding: 15px;
   border: none;
 }
 
-.button:hover {
+.button:hover,
+.experience__botao--demo:hover,
+.experiencia__botao--repo:hover {
   cursor: pointer;
 }
 
@@ -327,20 +333,26 @@ section.academic {
 .academic__courses {
   width: 90%;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  /* display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); */
+  display: flex;
+  flex-wrap: wrap;
   gap: 16px;
 }
 
 .academic__courses__box {
+  width: 370px;
 }
 
 .academic__courses__list {
   padding: 0;
+  width: 100%;
 }
 
 .academic__courses__item__img {
   padding: 16px 0;
+  width: 100%;
+  height: 150px;
   background-color: var(--blanco);
   display: flex;
   align-items: center;
@@ -348,7 +360,7 @@ section.academic {
 }
 
 .academic__courses__img {
-  width: 75%;
+  width: min(200px, 80%);
 }
 
 .academic__courses__item__title {
@@ -362,11 +374,19 @@ section.academic {
 /*Media Querie Phone*/
 @media (min-width: 463px) {
   .academic__courses__item__img {
-    height: 200px;
+    height: 250px;
   }
 
   .academic__courses__img {
-    width: 60%;
+    width: max(200px, 90px);
+  }
+
+  .academic__courses__item__title {
+    font-size: 22px;
+  }
+
+  .academic__courses__item__subtitle {
+    font-size: 16px;
   }
 }
 
@@ -374,9 +394,6 @@ section.academic {
 @media (min-width: 1140px) {
   .academic__courses {
     column-gap: 32px;
-  }
-  .academic__courses__item__img {
-    height: 300px;
   }
 }
 /*Fin de Media Querie Desktop*/
@@ -386,14 +403,84 @@ section.academic {
 section.experience {
 }
 
+.experience__section__title {
+  margin-bottom: 16px;
+}
+
 .experience__proyect {
   width: 100%;
   margin: 0 auto;
 }
 
+.experience__1,
+.experience__2 {
+  margin-top: 16px;
+}
+
 .experience__img {
   width: 100%;
 }
+
+.experience__text {
+  font-weight: normal;
+}
+
+.experience__repo {
+  margin-right: 16px;
+}
+
+.experiencia__botao--repo {
+  background-color: var(--blanco);
+  border: 1px solid var(--azul);
+  color: var(--azul);
+  padding: 15px 20px;
+  font-weight: 700;
+}
+
+.experience__demo {
+  font-size: 14px;
+}
+
+/*Inicio de Media Querie Mayor a 768px*/
+@media (width > 779px) {
+  .experience__1:first-child,
+  .experience__2 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    column-gap: 16px;
+    margin-top: 32px;
+  }
+
+  .experience__1,
+  .experience__2:last-child {
+    display: grid;
+    grid-template-areas: "izquierda derecha";
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    grid-auto-flow: column;
+    column-gap: 16px;
+    margin-top: 32px;
+  }
+
+  .experience__1:nth-child(2) .experience__img {
+    grid-area: derecha;
+  }
+
+  .experience__1:nth-child(2) .experience__info {
+    grid-area: izquierda;
+  }
+
+  .experience__2:last-child .experience__img {
+    grid-area: derecha;
+  }
+
+  /* 
+  .experience__1 .experience__info {
+    grid-area: ex;
+  } */
+}
+/*Fin de Media Querie Mayor a 768px*/
 
 /*Contacto*/
 
@@ -412,9 +499,9 @@ section.formcontato {
   display: none;
 }
 
-/* .formcontato__text {
-  width: 100%;
-} */
+.formcontato__title {
+  text-align: center;
+}
 
 .formcontato__subtext {
   font-weight: normal;
@@ -429,9 +516,47 @@ section.formcontato {
 .formcontato__input,
 .formcontato__textarea {
   border-radius: 5px;
-  border: none;
+  border: 2px solid #fff;
+  outline: none;
   padding: 15px;
   font-size: 16px;
+  font-family: var(--fuente-principal);
+}
+
+.formcontato__textarea {
+  resize: none;
+}
+
+.formcontato__error {
+  color: var(--red);
+  width: 100%;
+  padding-left: 15px;
+  margin-top: -10px;
+  display: flex;
+  column-gap: 5px;
+  align-items: center;
+}
+
+.formcontato__alert {
+  font-size: 16px;
+  text-align: center;
+  font-weight: 600;
+  margin: 0;
+  color: var(--red);
+}
+
+.green {
+  color: var(--verde);
+}
+
+.none {
+  display: none;
+}
+
+.formcontato__input:focus,
+.formcontato__textarea:focus {
+  border-radius: 0;
+  border-bottom-color: var(--azul);
 }
 
 .formcontato__botao {
@@ -457,8 +582,17 @@ section.formcontato {
     align-items: center;
   }
 
+  .formcontato__img {
+    width: 470px;
+    height: 100%;
+  }
+
   .formcontato__form {
     row-gap: 32px;
+  }
+
+  .formcontato__error {
+    margin-top: -27px;
   }
 }
 
