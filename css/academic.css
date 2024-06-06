@@ -4,41 +4,40 @@ section.academic {
   padding: 32px 0;
 }
 
-.academic__title {
-  text-align: center;
-}
-
 .academic__courses {
   width: 90%;
-  margin: 0 auto;
-  /* display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); */
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
+  margin: 16px auto;
 }
 
 .academic__courses__box {
-  width: 370px;
+  width: 100%;
+  background-color: var(--blanco);
+  padding: 16px 0;
+  margin-top: 16px;
 }
 
 .academic__courses__list {
-  padding: 0;
   width: 100%;
-}
-
-.academic__courses__item__img {
-  padding: 16px 0;
-  width: 100%;
-  height: 150px;
-  background-color: var(--blanco);
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  padding: 0;
+}
+.academic__courses__list h4,
+.academic__courses__list p {
+  padding-left: 16px;
+}
+.academic__courses__item__img {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 100vh;
+  display: flex;
   justify-content: center;
 }
 
-.academic__courses__img {
-  width: min(200px, 80%);
+.academic__courses__item__img img {
+  margin: 16px auto;
+  width: 50%;
+  max-width: 100vh;
 }
 
 .academic__courses__item__title {
@@ -49,29 +48,28 @@ section.academic {
   font-size: 14px;
 }
 
-/*Media Querie Phone*/
-@media (min-width: 463px) {
-  .academic__courses__item__img {
-    height: 250px;
+@media (width >= 510px) {
+  .academic__courses {
+    display: flex;
+    /* flex-wrap: wrap; */
+    gap: 16px;
   }
 
-  .academic__courses__img {
-    width: max(200px, 90px);
+  .academic__courses__box {
+    width: 250px;
+    padding: 16px;
+    flex-grow: 1;
+  }
+
+  .academic__courses__list {
+    width: 100%;
+  }
+
+  .academic__courses__item__img {
+    /* height: 170px; */
   }
 
   .academic__courses__item__title {
-    font-size: 22px;
-  }
-
-  .academic__courses__item__subtitle {
-    font-size: 16px;
+    /* height: 75px; */
   }
 }
-
-/*Inicio de Media Querie Desktop*/
-@media (min-width: 1140px) {
-  .academic__courses {
-    column-gap: 32px;
-  }
-}
-/*Fin de Media Querie Desktop*/
