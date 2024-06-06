@@ -1,0 +1,77 @@
+/* experiencia*/
+section.experience {
+}
+
+.experience__section__title {
+  margin-bottom: 16px;
+}
+
+.experience__proyect {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.experience__1,
+.experience__2 {
+  margin-top: 16px;
+}
+
+.experience__img {
+  width: 100%;
+}
+
+.experience__text {
+  font-weight: normal;
+}
+
+.experience__repo {
+  margin-right: 16px;
+}
+
+.experiencia__botao--repo {
+  background-color: var(--blanco);
+  border: 1px solid var(--azul);
+  color: var(--azul);
+  padding: 15px 20px;
+  font-weight: 700;
+}
+
+.experience__demo {
+  font-size: 14px;
+}
+
+/*Inicio de Media Querie Mayor a 768px*/
+@media (width > 779px) {
+  .experience__1:first-child,
+  .experience__2 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    column-gap: 16px;
+    margin-top: 32px;
+  }
+
+  .experience__1,
+  .experience__2:last-child {
+    display: grid;
+    grid-template-areas: "izquierda derecha";
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    grid-auto-flow: column;
+    column-gap: 16px;
+    margin-top: 32px;
+  }
+
+  .experience__1:nth-child(2) .experience__img {
+    grid-area: derecha;
+  }
+
+  .experience__1:nth-child(2) .experience__info {
+    grid-area: izquierda;
+  }
+
+  .experience__2:last-child .experience__img {
+    grid-area: derecha;
+  }
+}
+/*Fin de Media Querie Mayor a 768px*/

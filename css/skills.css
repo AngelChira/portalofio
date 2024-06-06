@@ -1,0 +1,47 @@
+/*Sección Skills*/
+section.skills {
+}
+
+.skills__title,
+.hobbies__title,
+.academic__title,
+.experience__section__title {
+  text-align: center;
+  font-size: 22px;
+  margin: 0;
+}
+
+.skills__line,
+.hobbies__line {
+  padding-top: 32px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(125px, 1fr));
+  gap: 16px;
+}
+
+.skills__box,
+.hobbies__box {
+  height: 110px;
+  background-color: var(--blanco);
+  display: flex;
+}
+
+.skills__box ul,
+.hobbies__box ul {
+  margin: auto;
+  padding: 0;
+  text-align: center;
+}
+
+.skills__name,
+.hobbies__name {
+  margin-top: 5px;
+  font-size: 16px;
+}
+
+@media (min-width: 1140px) {
+  .skills__title,
+  .hobbies__title {
+    font-size: 32px;
+  }
+}

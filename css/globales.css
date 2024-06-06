@@ -1,0 +1,28 @@
+/* Globales */
+section {
+  width: 90%;
+  margin: 0 auto;
+  padding: 32px 0;
+}
+
+.text-mobile {
+  font-size: 16px;
+}
+
+.button,
+.experience__botao--demo {
+  background-color: var(--azul);
+  color: var(--blanco);
+  padding: 15px;
+  border: none;
+}
+
+.button:hover,
+.experience__botao--demo:hover,
+.experiencia__botao--repo:hover {
+  cursor: pointer;
+}
+
+.mayus {
+  text-transform: uppercase;
+}

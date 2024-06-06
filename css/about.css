@@ -1,0 +1,33 @@
+/*Sección About Sobre Mi*/
+section.about {
+  width: 100%;
+  background-color: var(--celeste-claro);
+}
+
+.about__container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.about__title {
+  font-size: 22px;
+  margin: 0;
+}
+
+.about__paragraph {
+  font-size: 14px;
+  text-align: justify;
+}
+
+/*Inicio Media Querie Desktop*/
+@media (min-width: 1140px) {
+  .about__title {
+    font-size: 32px;
+  }
+
+  .about__paragraph {
+    width: 70%;
+    font-size: 16px;
+  }
+}
+/*Fin Media Querie Desktop*/

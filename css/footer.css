@@ -1,0 +1,14 @@
+/*Inicio Footeer*/
+
+section.footer {
+  width: 100%;
+  padding: 16px 0;
+  text-align: center;
+  background-color: var(--blanco);
+}
+
+.footer__text {
+  text-align: center;
+}
+
+/*Fin Footeer*/
